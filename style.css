@@ -7,7 +7,6 @@
     --headerText: #fff;
 }
 
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -22,7 +21,7 @@ header {
     text-align: center;
 }
 
-header a{
+header a {
     color: var(--headerText);
     text-decoration: none;
 }
@@ -59,29 +58,25 @@ main {
     background-color: #e0e0e0;
 }
 
-.role-links #Helper{
+.role-links #Helper {
     color: var(--helper);
 }
 
-.role-links #Moderator{
+.role-links #Moderator {
     color: var(--moderator);
 }
 
-.role-links #HeadModerator{
+.role-links #HeadModerator {
     color: var(--moderator);
 }
 
-.role-links #Administrator{
+.role-links #Administrator {
     color: var(--administrator);
 }
 
-/* ul li a:hover {
-    text-decoration: underline;
-} */
-
-#PunishGuide a{
+#PunishGuide a {
     color: red;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 #PunishGuide {
@@ -92,13 +87,9 @@ main {
     display: flex;
     justify-content: space-around;
 }
-#InstaLinks #ServerRules{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
 
-#InstaLinks #DiscordRules{
+#InstaLinks #ServerRules,
+#InstaLinks #DiscordRules {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -132,17 +123,20 @@ main {
     margin-left: 20px;
 }
 
-/* footer {
+.area-rules {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-    margin-top: 40px;
+    padding-top: 30px;
 }
 
-footer p {
-    margin: 5px 0;
-} */
+/* Remove the background, padding, and radius for the Server Rules and Discord Rules headings */
+#InstaLinks #ServerRules h1,
+#InstaLinks #DiscordRules h1 {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: black;
+}
+
 footer {
     text-align: center;
     padding: 10px 0;
