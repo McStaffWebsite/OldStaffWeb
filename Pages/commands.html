@@ -18,26 +18,24 @@
             <h2>Table of Contents</h2>
             <div id="InstaLinks">
                 <div id="ServerRules">
-                    <h1><a href="#ServerRules" id="titlelink" style="background-color: transparent;padding: 0;border-radius: 0;color: black;">Server Commands</a></h1>
+                    <h1><a href="#ServerRules" id="titlelink">Server Commands</a></h1>
                     <!-- COMMANDS -->
-                    <a href="#warn">/warn</a>
-                    <a href="#mute">/mute</a>
-                    <a href="#ban">/ban</a>
-                    <a href="#history">/history</a>
-
+                    <a href="#warn" class="instalink">/warn</a>
+                    <a href="#mute" class="instalink">/mute</a>
+                    <a href="#ban" class="instalink">/ban</a>
+                    <a href="#history" class="instalink">/history</a>
+                    <a href="#tp" class="instalink">/tp</a>
+                    <a href="#gmsp" class="instalink">/gmsp</a>
+                    <a href="#vanish" class="instalink">/vanish</a>
                 </div>
                 <div id="DiscordRules">
-                    <h1><a href="#discord-rules" id="titlelink" style="background-color: transparent;padding: 0;border-radius: 0;color: black;">Discord Commands</a></h1>
+                    <h1><a href="#discord-rules" id="titlelink">Discord Commands</a></h1>
                     <!-- COMMANDS -->
-                    <a href="#discord-spam">?warn</a>
-                    <a href="#discord-spam">?modlogs</a>
-
+                    <a href="#discord-warn" class="instalink">?warn</a>
+                    <a href="#discord-spam" class="instalink">?modlogs</a>
                 </div>
-                
             </div>
-            
         </section>
-
         <section id="punishment-details">
             <br><br>
             <h1 class="area-rules" id="ServerRules">Server</h1>
@@ -71,20 +69,38 @@
                 <li>/history ign [List amount] - Is for listing a specific amount from the history. <b>/history _DragonRush 30</b></li>
             </ul>
             
-            
+            <h2 id="tp">⮞ /tp</h2>
+            <p>The /tp command is for instantly tping to a player without them having to do /tpaaccept</p>
+            <ul>
+                <li>/tp [IGN] - ign attribute is to choose which player you want to tp to.</li>
+            </ul>
 
+            <h2 id="gmsp">⮞ /gmsp</h2>
+            <p>The /gmsp command is a command to go into spectator mode. This is used to spectate player suspected of cheating usually xraying. This is supposed to be used when you are in <a href="#vanish" id="desclink">vanish.</a></p> 
+            <!-- <ul>
+                <li>/tp [IGN] - ign attribute is to choose which player you want to tp to.</li>
+            </ul> -->
 
+            <h2 id="vanish">⮞ /vanish</h2>
+            <p>The /vanish command is for when you're gonna go in <a href="#gmsp" id="desclink">gmsp</a> and to spectate cheating players. This will hide you from /stafflist and tab so no players are aware you're online. It will also send a leave message in the</p>
+            <!-- <ul>
+                <li>/tp [IGN] - ign attribute is to choose which player you want to tp to.</li>
+            </ul> -->
+
+            <h2 id="">⮞ /</h2>
+            <p>The /</p>
+            <ul>
+                <li>/</li>
+            </ul>
 
             <h1 class="area-rules" id="discord-rules">Discord</h1> <!-- THIS IS NEXT SECTION-->
             
             
             
-            <h2 id="discord-spam">⮞ Spam</h2>
-            <p>Spam disrupts the flow of conversation and can make it difficult for others to communicate effectively. Please refrain from sending the same message multiple times or overwhelming the chat with excessive messages. Whether it’s repeating phrases, flooding the chat with random characters, or posting unnecessary links, all forms of spam are prohibited.</p>
+            <h2 id="discord-warn">⮞ ?warn</h2>
+            <p>The ?warn command is to send a user a warning for breaking a rule on the server. This gets logged in <a href="modlogs" id="desclink">modlogs</a>.</p>
             <ul>
-                <li>Violation #1 - Warn</li>
-                <li>Violation #2 - 15m Mute</li>
-                <li>Violation #3 - 30m Mute</li>
+                <li>?warn [User] - Is to decide which user to warn. </li>
             </ul>
 
             
@@ -100,6 +116,7 @@
         <p><a href="../index.html">Back to Home</a></p>
     </footer>
 </div>
+<script src="/javascript/theme-switcher.js"></script>
 </body>
 </html>
 

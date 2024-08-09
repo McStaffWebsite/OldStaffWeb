@@ -1,10 +1,26 @@
 :root {
-    --background: #f4f4f4;
-    --helper: #ffa3a5 ;
-    --moderator: #ffb3f2 ;
-    --headmoderator: #ce76ff ;
-    --administrator: #a421ff ;
-    --headerText: #fff;
+    --helper: #ffa3a5;
+    --moderator: #ffb3f2;
+    --headmoderator: #ce76ff;
+    --administrator: #a421ff;
+}
+
+:root[data-theme="light"] {
+    --text: #140e25;
+    --background: #e7e5f6;
+    --primary: #322466;
+    --secondary: #d382ca;
+    --accent: #a63a76;
+    --link-color: #007BFF; /* Added a variable for the link color */
+}
+
+:root[data-theme="dark"] {
+    --text: #e1dbf2;
+    --background: #0b0919;
+    --primary: #a799db;
+    --secondary: #7d2c74;
+    --accent: #c45893;
+    --link-color: #007BFF; /* Same link color for dark theme */
 }
 
 body {
@@ -12,17 +28,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background);
+    color: var(--text);
 }
 
 header {
-    background-color: #333;
-    color: var(--headerText);
+    background-color: var(--background);
+    color: var(--text);
     padding: 10px 0;
     text-align: center;
 }
 
 header a {
-    color: var(--headerText);
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -40,17 +57,9 @@ main {
 
 .role-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px 0;
-}
-
-.role-links a {
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
 }
 
 #PunishGuide {
@@ -59,36 +68,55 @@ main {
 
 #PunishGuide a {
     text-decoration: none;
-    color: #c54c4c;
+    color: var(--accent); 
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #e6e1e1;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.1s ease;
+}
+
+#PunishGuide a:hover {
+    transform: scale(1.2);
+}
+
+.role-links a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: var(--primary);
+    border-radius: 5px;
+    transition: transform 0.1s ease;
+    color: #e1dbf2;
 }
 
 .role-links a:hover {
-    background-color: #e0e0e0;
+    transform: scale(1.2);
 }
 
 .role-links #Helper {
-    color: var(--helper);
+    /* color: var(--helper); */
+    color: var(--text);
+    color: #e1dbf2;
+
 }
 
 .role-links #Moderator {
     color: var(--moderator);
+    color: var(--text);
+    color: #e1dbf2;
 }
 
 .role-links #HeadModerator {
-    color: var(--moderator);
+    color: var(--headmoderator); /* Fixed to use the correct variable */
+    color: var(--text);
+    color: #e1dbf2;
 }
 
 .role-links #Administrator {
     color: var(--administrator);
+    color: var(--text);
+    color: #e1dbf2;
 }
-
-
-
 
 #InstaLinks {
     display: flex;
@@ -103,39 +131,42 @@ main {
 }
 
 #InstaLinks a {
+    
+}
+
+.instalink{
     text-decoration: none;
-    color: #007BFF;
+    color: var(--text);
     font-weight: bold;
     padding: 10px;
-    background-color: #f0f0f0;
+    background-color: var(--accent);
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.15s ease;
+}
+
+#InstaLinks a:hover {
+    transform: scale(1.2);
 }
 
 #perms {
     display: flex;
     flex-direction: column;
     gap: 1px;
-    width: 500px;
+    width: 100%;
 }
 
 #perms a {
     text-decoration: none;
-    color: #007BFF;
+    color: var(--link-color);
     font-weight: bold;
     padding: 10px;
-    background-color: #f0f0f0;
+    background-color: var(--background); /* Changed to use background variable */
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 #perms a:hover {
-    background-color: #e0e0e0;
-}
-
-
-#InstaLinks a:hover {
-    background-color: #e0e0e0;
+    background-color: var(--secondary); /* Added to match theme colors */
 }
 
 #punishment-details h2 {
@@ -157,19 +188,37 @@ main {
     padding-top: 30px;
 }
 
-/* Remove the background, padding, and radius for the Server Rules and Discord Rules headings */
+/* Specific styles for Server Rules and Discord Rules headings */
 #InstaLinks #ServerRules h1,
 #InstaLinks #DiscordRules h1 {
     background-color: transparent;
     padding: 0;
     border-radius: 0;
-    color: black;
+    color: var(--text); /* Use text variable for color */
 }
 
 #page-wrapper {
     position: relative;
     min-height: 100vh;
-  }
+}
+
+#desclink {
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+#titlelink {
+    background-color: transparent;  
+    padding: 0;  
+    border-radius: 0;  
+    color: var(--text);  
+    text-decoration: none;  
+    font-weight: bold;  
+}
+
+#titlelink:hover {
+    color: var(--accent);  /* Change color on hover, using the accent color */
+}
 
 footer {
     position: absolute;
@@ -177,8 +226,8 @@ footer {
     width: 100%;
     text-align: center;
     padding: 10px 0;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--background);
+    color: var(--text);
     margin-top: 20px;
 }
 
