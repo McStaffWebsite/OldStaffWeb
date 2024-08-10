@@ -6,21 +6,33 @@
 }
 
 :root[data-theme="light"] {
-    --text: #140e25;
+    /* --text: #140e25;
     --background: #e7e5f6;
     --primary: #322466;
     --secondary: #d382ca;
-    --accent: #a63a76;
+    --accent: #a63a76; */
+    --text: #140e25;
+    --background: #e6e4f6;
+    --primary: #322466;
+    --secondary: #a28ae3;
+    --accent: #7953e2;
     --link-color: #007BFF; /* Added a variable for the link color */
+    --box-shadow: rgba(0, 0, 0, 0.2);
 }
 
 :root[data-theme="dark"] {
-    --text: #e1dbf2;
+    /* --text: #e1dbf2;
     --background: #0b0919;
     --primary: #a799db;
     --secondary: #7d2c74;
-    --accent: #c45893;
+    --accent: #c45893; */
+    --text: #e0daf1;
+    --background: #0b091b;
+    --primary: #a799db;
+    --secondary: #331c73;
+    --accent: #421daa;
     --link-color: #007BFF; /* Same link color for dark theme */
+    --box-shadow: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -52,7 +64,7 @@ main {
     max-width: 1000px;
     margin: auto;
     background-color: var(--background);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px var(--box-shadow);
 }
 
 .role-links {
@@ -78,6 +90,10 @@ main {
 #PunishGuide a:hover {
     transform: scale(1.2);
 }
+
+/* #PunishGuideHammer  {
+    width: 50px;
+} */
 
 .role-links a {
     text-decoration: none;
