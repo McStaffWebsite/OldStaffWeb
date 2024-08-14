@@ -6,32 +6,22 @@
 }
 
 :root[data-theme="light"] {
-    /* --text: #140e25;
-    --background: #e7e5f6;
-    --primary: #322466;
-    --secondary: #d382ca;
-    --accent: #a63a76; */
     --text: #140e25;
     --background: #e6e4f6;
     --primary: #322466;
     --secondary: #a28ae3;
     --accent: #7953e2;
-    --link-color: #007BFF; /* Added a variable for the link color */
+    --link-color: #007BFF;
     --box-shadow: rgba(0, 0, 0, 0.2);
 }
 
 :root[data-theme="dark"] {
-    /* --text: #e1dbf2;
-    --background: #0b0919;
-    --primary: #a799db;
-    --secondary: #7d2c74;
-    --accent: #c45893; */
     --text: #e0daf1;
     --background: #0b091b;
     --primary: #a799db;
     --secondary: #331c73;
     --accent: #421daa;
-    --link-color: #007BFF; /* Same link color for dark theme */
+    --link-color: #007BFF;
     --box-shadow: rgba(255, 255, 255, 0.2);
 }
 
@@ -80,7 +70,7 @@ main {
 
 #PunishGuide a {
     text-decoration: none;
-    color: var(--accent); 
+    color: var(--accent);
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 5px;
@@ -90,10 +80,6 @@ main {
 #PunishGuide a:hover {
     transform: scale(1.2);
 }
-
-/* #PunishGuideHammer  {
-    width: 50px;
-} */
 
 .role-links a {
     text-decoration: none;
@@ -110,28 +96,23 @@ main {
 }
 
 .role-links #Helper {
-    /* color: var(--helper); */
-    color: var(--text);
-    color: #e1dbf2;
-
+    color: var(--helper);
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 .role-links #Moderator {
     color: var(--moderator);
-    color: var(--text);
-    color: #e1dbf2;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 .role-links #HeadModerator {
-    color: var(--headmoderator); /* Fixed to use the correct variable */
-    color: var(--text);
-    color: #e1dbf2;
+    color: var(--headmoderator);
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 .role-links #Administrator {
     color: var(--administrator);
-    color: var(--text);
-    color: #e1dbf2;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
 }
 
 #InstaLinks {
@@ -140,17 +121,24 @@ main {
 }
 
 #InstaLinks #ServerRules,
-#InstaLinks #DiscordRules {
+#InstaLinks #DiscordRules,
+#perms {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-#InstaLinks a {
-    
+#perms #serverPerms,
+#perms #discordPerms {
+    flex-direction: column;
 }
 
-.instalink{
+#InstaLinks a:hover {
+    transform: scale(1.2);
+}
+.instalink,
+
+#perms .perm {
     text-decoration: none;
     color: var(--text);
     font-weight: bold;
@@ -160,30 +148,29 @@ main {
     transition: transform 0.15s ease;
 }
 
-#InstaLinks a:hover {
-    transform: scale(1.2);
-}
 
 #perms {
     display: flex;
-    flex-direction: column;
-    gap: 1px;
-    width: 100%;
+    justify-content: space-between; /* Adjusts spacing between items */
+    gap: 20px; /* Adds space between permission groups */
 }
 
-#perms a {
+#serverPerm, #discordPerms {
+    flex: 1; /* Makes each permission group take up an equal amount of space */
+}
+
+.perm {
     text-decoration: none;
-    color: var(--link-color);
+    color: var(--text);
     font-weight: bold;
     padding: 10px;
-    background-color: var(--background); /* Changed to use background variable */
+    background-color: var(--accent);
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: transform 0.15s ease;
+    display: block;
+    margin-bottom: 10px;
 }
 
-#perms a:hover {
-    background-color: var(--secondary); /* Added to match theme colors */
-}
 
 #punishment-details h2 {
     margin-top: 40px;
@@ -204,13 +191,12 @@ main {
     padding-top: 30px;
 }
 
-/* Specific styles for Server Rules and Discord Rules headings */
 #InstaLinks #ServerRules h1,
 #InstaLinks #DiscordRules h1 {
     background-color: transparent;
     padding: 0;
     border-radius: 0;
-    color: var(--text); /* Use text variable for color */
+    color: var(--text);
 }
 
 #page-wrapper {
@@ -224,16 +210,16 @@ main {
 }
 
 #titlelink {
-    background-color: transparent;  
-    padding: 0;  
-    border-radius: 0;  
-    color: var(--text);  
-    text-decoration: none;  
-    font-weight: bold;  
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 #titlelink:hover {
-    color: var(--accent);  /* Change color on hover, using the accent color */
+    color: var(--accent);
 }
 
 footer {
