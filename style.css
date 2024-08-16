@@ -121,8 +121,8 @@ main {
 }
 
 #InstaLinks #ServerRules,
-#InstaLinks #DiscordRules,
-#perms {
+#InstaLinks #DiscordRules
+{
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -133,11 +133,7 @@ main {
     flex-direction: column;
 }
 
-#InstaLinks a:hover {
-    transform: scale(1.2);
-}
 .instalink,
-
 #perms .perm {
     text-decoration: none;
     color: var(--text);
@@ -148,29 +144,23 @@ main {
     transition: transform 0.15s ease;
 }
 
-
-#perms {
-    display: flex;
-    justify-content: space-between; /* Adjusts spacing between items */
-    gap: 20px; /* Adds space between permission groups */
+#InstaLinks a:hover {
+    transform: scale(1.2);
 }
 
-#serverPerm, #discordPerms {
-    flex: 1; /* Makes each permission group take up an equal amount of space */
-}
-
-.perm {
+/* #perms a {
     text-decoration: none;
-    color: var(--text);
+    color: var(--link-color);
     font-weight: bold;
     padding: 10px;
-    background-color: var(--accent);
+    background-color: var(--background);
     border-radius: 5px;
-    transition: transform 0.15s ease;
-    display: block;
-    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
 }
 
+#perms a:hover {
+    background-color: var(--secondary);
+} */
 
 #punishment-details h2 {
     margin-top: 40px;
@@ -235,4 +225,44 @@ footer {
 
 footer p {
     margin: 5px 0;
+}
+
+html { scroll-behavior: smooth; }
+
+.rule {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--background); /* Example variable, adjust as needed */
+    border: 1px solid var(--accent); /* Example variable, adjust as needed */
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--box-shadow); /* Example variable, adjust as needed */
+}
+
+.rule h1 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: var(--accent); /* Example variable, adjust as needed */
+}
+
+.rule p {
+    margin: 10px 0 0 0;
+    font-size: 1em;
+    color: var(--text); /* Example variable, adjust as needed */
+}
+
+
+#scrollTopBtn{
+    color: var(--text);
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 10px var(--box-shadow);
+    background-color: transparent;
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+    width: 50px;
+    height: 50px;
+}
+
+#scrollTopBtn:hover{
+    cursor:pointer;
 }
