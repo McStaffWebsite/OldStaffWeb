@@ -227,8 +227,6 @@ footer p {
     margin: 5px 0;
 }
 
-html { scroll-behavior: smooth; }
-
 .rule {
     margin-bottom: 20px;
     padding: 15px;
